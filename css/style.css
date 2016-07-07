@@ -856,7 +856,7 @@
     margin-left: 0%;
   }
 }
-.icons-sprite, .preferences {
+.icons-sprite, [class*="_experience"], [class*="_methods"], [class*="_approach"] {
   background-image: url('../img/icons-seb23315534.png');
   background-repeat: no-repeat;
 }
@@ -919,9 +919,7 @@
 
 .logo a {
   display: block;
-  background-image: url("../img/logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../img/logo.png") no-repeat center;
   height: 52px;
 }
 
@@ -951,7 +949,17 @@
   display: block;
   position: relative;
   padding-left: 40px;
-  background-position: 0 -240px;
   height: 40px;
-  width: 40px;
+}
+
+[class*="_experience"] {
+  background-position: 0 -120px;
+}
+
+[class*="_methods"] {
+  background-position: 0 -240px;
+}
+
+[class*="_approach"] {
+  background-position: 0 0;
 }

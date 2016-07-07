@@ -11,7 +11,7 @@
 @import "compass/utilities/sprites";
 @import "icons/*.png";
 
-$icons-sprite-dimensions: true;
+//$icons-sprite-height: true;
 
 .clearfix {
   &:before,
@@ -26,6 +26,7 @@ $icons-sprite-dimensions: true;
 
 $blue-color: #3f4e86;
 $margin: 20px;
+$height: icons-sprite-height(experience);
 
 * {
   box-sizing: border-box;
@@ -78,12 +79,9 @@ $margin: 20px;
 
 .logo a {
   display: block;
-  background-image: url("../img/logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../img/logo.png") no-repeat center;
   height: 52px;
 }
-
 .col-experience, .col-methods, .col-approach {
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,5 +108,17 @@ $margin: 20px;
   display: block;
   position: relative;
   padding-left: 40px;
+  height: $height;
+}
+
+[class*="_experience"]{
+  @include icons-sprite(experience);
+}
+
+[class*="_methods"]{
   @include icons-sprite(methods);
+}
+
+[class*="_approach"]{
+  @include icons-sprite(approach);
 }
