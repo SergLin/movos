@@ -1,0 +1,143 @@
+/*
+* Third Party
+*/
+@import "../../../bower_components/normalize.css/normalize.css";
+/*
+* Custom example for collector ->  @import "partials/app";
+*/
+//@import "compass/reset";
+@import "partials/_grid";
+@import "compass";
+@import "compass/utilities/sprites";
+@import "icons/*.png";
+
+$icons-sprite-dimensions: true;
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+$blue-color: #3f4e86;
+$margin: 20px;
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.wrapper {
+  border-top: 3px solid $blue-color;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.row_contacts {
+  background-color: $blue-color;
+  padding: 10px 0;
+  margin-bottom: 2px;
+}
+
+.contact__title {
+  color: #ffffff;
+}
+
+.contact__item {
+  color: #aad4ff;
+  text-decoration: none;
+}
+
+.all-contacts {
+  text-align: right;
+  vertical-align: middle;
+  a {
+    color: #aad4ff;
+  }
+}
+
+@media (max-width: 767px) {
+  .all-contacts, .contacts, .preferences {
+    text-align: center;
+  }
+}
+
+.col-logo {
+  background-color: #ededed;
+}
+
+.logo a {
+  display: block;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 52px;
+}
+
+.col-experience, .col-methods, .col-approach {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 52px;
+}
+
+.col-experience {
+  background-image: url("../img/experience.jpg");
+}
+
+.col-methods {
+  background-image: url("../img/methods.jpg");
+}
+
+.col-approach {
+  background-image: url("../img/approach.jpg");
+}
+
+.preferences{
+  
+}
+
+.icons{
+  display: inline-block;
+}
+
+[class*="_experience"] {
+  @include icons-sprite(experience);
+}
+
+/* [class*="_methods"]::before {
+  @include icons-sprite(methods);
+}
+
+[class*="_approach"]::before {
+  @include icons-sprite(approach);
+} */
+
+.preferences__title{
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  // margin-left: 50px;
+  display: inline-block; 
+}
+
+
+
+
+//.preferences__icon{
+//  width: 40px;
+//  height: 40px;
+//  background-color: #00AA00;
+//  margin: 5px;
+//  float: left;
+//}
