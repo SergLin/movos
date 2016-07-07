@@ -856,7 +856,7 @@
     margin-left: 0%;
   }
 }
-.icons-sprite, [class*="_experience"] {
+.icons-sprite, .preferences {
   background-image: url('../img/icons-seb23315534.png');
   background-repeat: no-repeat;
 }
@@ -943,27 +943,15 @@
   background-image: url("../img/approach.jpg");
 }
 
-.icons {
-  display: inline-block;
-}
-
-[class*="_experience"] {
-  background-position: 0 -120px;
-  height: 40px;
-  width: 40px;
-}
-
-/* [class*="_methods"]::before {
-  @include icons-sprite(methods);
-}
-
-[class*="_approach"]::before {
-  @include icons-sprite(approach);
-} */
-.preferences__title {
+.preferences {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
-  display: inline-block;
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  background-position: 0 -240px;
+  height: 40px;
+  width: 40px;
 }
