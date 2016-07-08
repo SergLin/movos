@@ -856,7 +856,7 @@
     margin-left: 0%;
   }
 }
-.icons-sprite, [class*="_experience"], [class*="_methods"], [class*="_approach"] {
+.icons-sprite {
   background-image: url('../img/icons-seb23315534.png');
   background-repeat: no-repeat;
 }
@@ -913,8 +913,9 @@
     text-align: center;
   }
 }
-.col-logo {
+.logo {
   background-color: #ededed;
+  margin: 0 -10px;
 }
 
 .logo a {
@@ -923,43 +924,41 @@
   height: 52px;
 }
 
-.col-experience, .col-methods, .col-approach {
+.preferences-experience, .preferences-methods, .preferences-approach {
   background-repeat: no-repeat;
   background-size: cover;
   height: 52px;
 }
 
-.col-experience {
-  background-image: url("../img/experience.jpg");
+.preferences-experience {
+  background-image: url("../img/experience-bg.jpg");
+  margin: 0 -10px;
 }
 
-.col-methods {
-  background-image: url("../img/methods.jpg");
+.preferences-methods {
+  background-image: url("../img/methods-bg.jpg");
+  margin: 0 -10px;
 }
 
-.col-approach {
-  background-image: url("../img/approach.jpg");
+.preferences-approach {
+  background-image: url("../img/approach-bg.jpg");
+  margin: 0 -10px;
 }
 
-.preferences {
+.preferences__title {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
-  display: block;
+  display: inline-block;
   position: relative;
-  padding-left: 40px;
   height: 40px;
+  vertical-align: middle;
 }
-
-[class*="_experience"] {
-  background-position: 0 -120px;
-}
-
-[class*="_methods"] {
-  background-position: 0 -240px;
-}
-
-[class*="_approach"] {
-  background-position: 0 0;
+.preferences__title::after {
+  content: "";
+  display: inline-block;
+  min-height: inherit;
+  height: 100%;
+  vertical-align: middle;
 }

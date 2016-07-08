@@ -11,7 +11,7 @@
 @import "compass/utilities/sprites";
 @import "icons/*.png";
 
-//$icons-sprite-height: true;
+$icons-sprite-dimensions: true;
 
 .clearfix {
   &:before,
@@ -73,8 +73,9 @@ $height: icons-sprite-height(experience);
   }
 }
 
-.col-logo {
+.logo {
   background-color: #ededed;
+  margin: 0 -10px;
 }
 
 .logo a {
@@ -82,43 +83,47 @@ $height: icons-sprite-height(experience);
   background: url("../img/logo.png") no-repeat center;
   height: 52px;
 }
-.col-experience, .col-methods, .col-approach {
+.preferences-experience, .preferences-methods, .preferences-approach {
   background-repeat: no-repeat;
   background-size: cover;
   height: 52px;
 }
 
-.col-experience {
-  background-image: url("../img/experience.jpg");
+.preferences-experience {
+  background-image: url("../img/experience-bg.jpg");
+  margin: 0 -10px;
 }
 
-.col-methods {
-  background-image: url("../img/methods.jpg");
+.preferences-methods {
+  background-image: url("../img/methods-bg.jpg");
+  margin: 0 -10px;
 }
 
-.col-approach {
-  background-image: url("../img/approach.jpg");
+.preferences-approach {
+  background-image: url("../img/approach-bg.jpg");
+  margin: 0 -10px;
 }
 
-.preferences {
+.preferences__title {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
-  display: block;
+  display: inline-block;
   position: relative;
-  padding-left: 40px;
   height: $height;
+  vertical-align: middle;
+  &::after{
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 100%;
+    vertical-align: middle;
+  }
 }
 
-[class*="_experience"]{
-  @include icons-sprite(experience);
-}
+//[class*="_experience"]::before{
+//  content: '';
+//  @include icons-sprite(experience);
+//}
 
-[class*="_methods"]{
-  @include icons-sprite(methods);
-}
-
-[class*="_approach"]{
-  @include icons-sprite(approach);
-}
