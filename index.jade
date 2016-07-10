@@ -10,31 +10,47 @@ html(lang='uk')
   body
     .wrapper
       .container
-        .header
-          .row.row_contacts.clearfix
-            .col-sm-8
-              .contacts
-                span(class="contact__title") Багатоканальний телефон:
-                a(class="contact__item" href="tel:+38097909692")  +38 (097) 909-69-2
-            .col-sm-4
-              .all-contacts
-                a(href="#") Наші контакти
-          .row.clearfix
-            .col-sm-3.col-logo
-              .logo
-                a(href="#" title="на головну")
-            .col-sm-3
-              .preferences.preferences-experience
-                .preferences__title багаторічний досвід
-            .col-sm-3
-              .preferences.preferences-methods
-                .preferences__title інтерактивні методи
-            .col-sm-3
-              .preferences.preferences-approach
-                .preferences__title індивідуальний підхід до кожного
-        .main
-          .content
-          .nav-menu
+        .row.row_contacts.clearfix
+          .col-sm-8
+            .contacts
+              span(class="contact__title") Багатоканальний телефон:
+              a(class="contact__item" href="tel:+38097909692")  +38 (097) 909-69-2
+          .col-sm-4
+            .all-contacts
+              a(href="#") Наші контакти
+        .row.clearfix
+          .col-sm-3.col-logo
+            .logo
+              a(href="#" title="на головну")
+          .col-sm-3
+            .preferences.preferences-experience
+              .preferences__title.preferences__title_experience багаторічний досвід
+          .col-sm-3
+            .preferences.preferences-methods
+              .preferences__title інтерактивні методи
+          .col-sm-3
+            .preferences.preferences-approach
+              .preferences__title.preferences__title_experience індивідуальний підхід до кожного
+        .row
+          .col-md-3
+            .nav-menu
+              ul(class="menu")
+                li(class="menu__item")
+                  a(href="#") Головна
+                li(class="menu__item")
+                  a(href="#") Про нас
+                li(class="menu__item")
+                  a(href="#") Послуги
+                li(class="menu__item")
+                  a(href="#") Англійська мова
+                li(class="menu__item")
+                  a(href="#") Французька мова
+                li(class="menu__item")
+                  a(href="#") Німецька
+                li(class="menu__item")
+                  a(href="#") Контакти
+            .col-sm-9
+              .content
         .footer
           .row
             .col-sm-6

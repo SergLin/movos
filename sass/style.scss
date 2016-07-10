@@ -11,7 +11,7 @@
 @import "compass/utilities/sprites";
 @import "icons/*.png";
 
-$icons-sprite-dimensions: true;
+//$icons-sprite-dimensions: true;
 
 .clearfix {
   &:before,
@@ -43,6 +43,8 @@ $height: icons-sprite-height(experience);
   margin: 0 auto;
   padding: 20px 10px;
 }
+
+/***header***/
 
 .row_contacts {
   background-color: $blue-color;
@@ -104,26 +106,56 @@ $height: icons-sprite-height(experience);
   margin: 0 -10px;
 }
 
+.preferences::before{
+  content: "";
+  display: inline-block;
+  min-height: inherit;
+  height: 100%;
+  vertical-align: middle;
+}
+
 .preferences__title {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
   display: inline-block;
-  position: relative;
-  height: $height;
   vertical-align: middle;
-  &::after{
-    content: "";
-    display: inline-block;
-    min-height: inherit;
-    height: 100%;
-    vertical-align: middle;
-  }
+  padding-left: 60px;
+  position: relative;
 }
 
 //[class*="_experience"]::before{
 //  content: '';
 //  @include icons-sprite(experience);
+//  display: inline-block;
+//  position: absolute;
+//  left: 10px;
 //}
 
+/***main***/
+
+.nav-menu{
+  margin: 0 -10px;
+  background-color: #e4e5e9;
+}
+
+.menu{
+  padding-left: 0;
+}
+
+.menu__item{
+  list-style: none;
+  border-bottom: 1px solid #d7d7d7;
+  border-top: 1px solid #f4f4f4;
+  &:last-child{
+    border-bottom: none;
+  }
+
+  a{
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+    display: block;
+  }
+}
