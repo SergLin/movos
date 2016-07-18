@@ -6,6 +6,8 @@
 * Custom example for collector ->  @import "partials/app";
 */
 //@import "compass/reset";
+
+
 @import "partials/_grid";
 @import "compass";
 @import "compass/utilities/sprites";
@@ -73,6 +75,28 @@ $height: icons-sprite-height(experience);
   .all-contacts, .contacts, .preferences {
     text-align: center;
   }
+  .nav-menu{
+    margin-right: -10px;
+  }
+
+}
+@media (min-width: 768px) {
+  .menu__item:hover{
+    .menu-link{
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 17px 0 17px 10px;
+        border-color: transparent transparent transparent #3f4e86;
+        position: absolute;
+        right: -10px;
+        top: 0;
+      }
+    }  
+  }      
 }
 
 .logo {
@@ -85,6 +109,7 @@ $height: icons-sprite-height(experience);
   background: url("../img/logo.png") no-repeat center;
   height: 52px;
 }
+
 .preferences-experience, .preferences-methods, .preferences-approach {
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,7 +131,7 @@ $height: icons-sprite-height(experience);
   margin: 0 -10px;
 }
 
-.preferences::before{
+.preferences::before {
   content: "";
   display: inline-block;
   min-height: inherit;
@@ -135,27 +160,53 @@ $height: icons-sprite-height(experience);
 
 /***main***/
 
-.nav-menu{
-  margin: 0 -10px;
+.nav-menu {
+  margin-left: -10px;
   background-color: #e4e5e9;
 }
 
-.menu{
+.menu {
   padding-left: 0;
 }
 
-.menu__item{
+.sub-menu{
+  display: none;
+  padding-left: 30px;
+  .sub-menu__item{
+    list-style: disc $blue-color;
+    a{
+      padding: 5px;
+      display: inline-block;
+    }
+  }
+}
+
+.menu__item {
   list-style: none;
   border-bottom: 1px solid #d7d7d7;
   border-top: 1px solid #f4f4f4;
-  &:last-child{
+  position: relative;
+  &:last-child {
     border-bottom: none;
   }
-
-  a{
+  &:first-child {
+    border-top: none;
+  }
+  .menu-link {
     color: black;
     font-size: 13px;
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
   }
+}
+
+ul.menu > li.menu__item:hover > ul.sub-menu{
+   display: block;
+}
+
+li.menu__item:hover > .menu-link{
+  background-color: $blue-color;
+  color: white;
 }
