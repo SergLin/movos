@@ -1038,3 +1038,8 @@ li.menu__item:hover > .menu-link {
   background-color: #3f4e86;
   color: white;
 }
+
+h1 {
+  color: red;
+  font-size: 25px;
+}

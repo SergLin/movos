@@ -95,8 +95,8 @@ $height: icons-sprite-height(experience);
         right: -10px;
         top: 0;
       }
-    }  
-  }      
+    }
+  }
 }
 
 .logo {
@@ -209,4 +209,9 @@ ul.menu > li.menu__item:hover > ul.sub-menu{
 li.menu__item:hover > .menu-link{
   background-color: $blue-color;
   color: white;
+}
+
+h1{
+  color: red;
+  font-size: 25px;
 }
